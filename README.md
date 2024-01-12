@@ -2,6 +2,34 @@
 
 ## Course
 
+## Install the Flux CLI
+
+- https://fluxcd.io/flux/installation/#install-the-flux-cli
+
+Mac
+
+```bash
+brew install fluxcd/tap/flux
+```
+
+Linux
+
+```bash
+curl -s https://fluxcd.io/install.sh | sudo bash
+```
+
+Autocomplete
+
+```bash
+. <(flux completion bash)
+```
+
+ZSH
+
+```zsh
+. <(flux completion zsh)
+```
+
 ## Bootstrap using Gitlab
 
 - https://fluxcd.io/flux/installation/bootstrap/gitlab/
