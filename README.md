@@ -84,7 +84,7 @@ flux bootstrap gitlab \
 
 ## Helm Repoisotry
 
-```bash
+```yaml
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
@@ -97,7 +97,7 @@ spec:
 
 ## Helm Repoisotry from Artifactory
 
-```bash
+```yaml
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
@@ -122,7 +122,7 @@ stringData:
 
 ## Helm Release
 
-```bash
+```yaml
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
