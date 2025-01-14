@@ -12,6 +12,12 @@ Mac
 brew install fluxcd/tap/flux
 ```
 
+or upgrade
+
+```bash
+brew upgrade fluxcd/tap/flux
+```
+
 Linux
 
 ```bash
