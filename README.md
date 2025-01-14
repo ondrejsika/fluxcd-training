@@ -120,6 +120,30 @@ stringData:
   password: cmVmdGtuOjAxOjE3NjQ3MDc4Mjk6dFZKWXpZeEN4VTM0Rm9CWVNqQ2tBMjI4Y2RO
 ```
 
+## Helm Release
+
+```bash
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hello-world
+  namespace: default
+spec:
+  releaseName: hello-world
+  chart:
+    spec:
+      chart: hello-world
+      sourceRef:
+        kind: HelmRepository
+        name: sikalabs
+        namespace: flux-system
+      version: 0.10.0
+  interval: 1m
+  values:
+    host: hello-world.k8s.sikademo.com
+    replicas: 2
+```
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
