@@ -2,6 +2,12 @@
 
 ## Course
 
+## Install Flux using Helm
+
+```
+helm install -n flux-system --create-namespace flux oci://ghcr.io/fluxcd-community/charts/flux2
+```
+
 ## Install the Flux CLI
 
 - https://fluxcd.io/flux/installation/#install-the-flux-cli
