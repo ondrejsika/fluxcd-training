@@ -144,6 +144,22 @@ spec:
     replicas: 2
 ```
 
+## Git Repository
+
+```yaml
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: fluxcd-training
+  namespace: flux-system
+spec:
+  url: https://github.com/ondrejsika/fluxcd-training.git
+  timeout: 60s
+  interval: 1m0s
+  ref:
+    branch: master
+```
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
