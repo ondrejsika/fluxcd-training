@@ -41,20 +41,43 @@ ZSH
 - https://fluxcd.io/flux/installation/bootstrap/gitlab/
 - https://gitlab.sikademo.com/-/user_settings/personal_access_tokens
 
+Create in group
+
 ```bash
 export GITLAB_TOKEN=
 GITLAB_HOSTNAME=gitlab.sikademo.com
-GITLAB_USERNAME=ondrejsika
+GITLAB_OWNER=ondrejsika
+GITLAB_REPOSIOTRY=example
 GITLAB_PROJECT_PATH=clusters/sikademo
 ```
 
 ```bash
 flux bootstrap gitlab \
   --deploy-token-auth \
-  --owner=$GITLAB_USERNAME \
-  --repository=example \
+  --owner=$GITLAB_OWNER \
+  --repository=$GITLAB_REPOSIOTRY \
+  --branch=master \
+  --hostname=$GITLAB_HOSTNAME \
+  --path=$GITLAB_PROJECT_PATH
+```
+
+or personal
+
+```bash
+export GITLAB_TOKEN=
+GITLAB_HOSTNAME=gitlab.sikademo.com
+GITLAB_OWNER=ondrejsika
+GITLAB_REPOSIOTRY=example
+GITLAB_PROJECT_PATH=clusters/sikademo
+```
+
+```bash
+flux bootstrap gitlab \
+  --deploy-token-auth \
+  --owner=$GITLAB_OWNER \
+  --repository=$GITLAB_REPOSIOTRY \
   --branch=master \
   --hostname=$GITLAB_HOSTNAME \
   --path=$GITLAB_PROJECT_PATH \
-  --personal
+  --personal # required for personal project
 ```
