@@ -160,6 +160,24 @@ spec:
     branch: master
 ```
 
+## Kustomization
+
+```yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kustomize01
+  namespace: flux-system
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: fluxcd-training
+  path: ./examples/kustomize01/
+  interval: 1m0s
+  prune: true
+  force: false
+```
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
