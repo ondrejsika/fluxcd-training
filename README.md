@@ -45,7 +45,7 @@ ZSH
 export GITLAB_TOKEN=
 GITLAB_HOSTNAME=gitlab.sikademo.com
 GITLAB_USERNAME=ondrejsika
-GITLAB_PROJECT_PATH=ondrejsika/fluxcd-example
+GITLAB_PROJECT_PATH=clusters/sikademo
 ```
 
 ```bash
