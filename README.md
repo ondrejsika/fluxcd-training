@@ -82,6 +82,48 @@ flux bootstrap gitlab \
   --personal # required for personal project
 ```
 
+## Git Repository
+
+```yaml
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: fluxcd-training
+  namespace: flux-system
+spec:
+  url: https://github.com/ondrejsika/fluxcd-training.git
+  timeout: 60s
+  interval: 1m0s
+  ref:
+    branch: master
+```
+
+```
+kubectl get GitRepository -A
+```
+
+## Kustomization
+
+```yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kustomize01
+  namespace: flux-system
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: fluxcd-training
+  path: ./examples/kustomize01/
+  interval: 1m0s
+  prune: true
+  force: false
+```
+
+```
+kubectl get Kustomization -A
+```
+
 ## Helm Repoisotry
 
 ```yaml
@@ -150,48 +192,6 @@ spec:
 
 ```
 kubectl get HelmRelease -A
-```
-
-## Git Repository
-
-```yaml
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: fluxcd-training
-  namespace: flux-system
-spec:
-  url: https://github.com/ondrejsika/fluxcd-training.git
-  timeout: 60s
-  interval: 1m0s
-  ref:
-    branch: master
-```
-
-```
-kubectl get GitRepository -A
-```
-
-## Kustomization
-
-```yaml
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: kustomize01
-  namespace: flux-system
-spec:
-  sourceRef:
-    kind: GitRepository
-    name: fluxcd-training
-  path: ./examples/kustomize01/
-  interval: 1m0s
-  prune: true
-  force: false
-```
-
-```
-kubectl get Kustomization -A
 ```
 
 ## FluxCD UI - Capacitor
