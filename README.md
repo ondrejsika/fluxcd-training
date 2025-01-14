@@ -39,7 +39,7 @@ ZSH
 ## Bootstrap using Gitlab
 
 - https://fluxcd.io/flux/installation/bootstrap/gitlab/
-- https://gitlab.sikalabs.com/-/user_settings/personal_access_tokens
+- https://gitlab.sikademo.com/-/user_settings/personal_access_tokens
 
 ```bash
 export GITLAB_TOKEN=
