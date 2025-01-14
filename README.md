@@ -220,6 +220,36 @@ See it: http://127.0.0.1:9000
 kubectl apply -f ./examples/kustomization02.yml
 ```
 
+## Counter example on k3d
+
+Setup k3d cluster
+
+```
+k3d cluster create
+```
+
+Install Flux (using Helm)
+
+```
+helm install -n flux-system --create-namespace flux oci://ghcr.io/fluxcd-community/charts/flux2
+```
+
+Install counter example
+
+```
+kubectl apply -f ./examples/counter.yml
+```
+
+Port forward to frontend
+
+```
+kubectl port-forward -n counter svc/frontend 8000:80
+```
+
+See it
+
+http://127.0.0.1:8000
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
