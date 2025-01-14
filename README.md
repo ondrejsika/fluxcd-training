@@ -95,6 +95,10 @@ spec:
   interval: 1m
 ```
 
+```
+kubectl get HelmRepository -A
+```
+
 ## Helm Repoisotry from Artifactory
 
 ```yaml
@@ -144,6 +148,10 @@ spec:
     replicas: 2
 ```
 
+```
+kubectl get HelmRelease -A
+```
+
 ## Git Repository
 
 ```yaml
@@ -158,6 +166,10 @@ spec:
   interval: 1m0s
   ref:
     branch: master
+```
+
+```
+kubectl get GitRepository -A
 ```
 
 ## Kustomization
@@ -176,6 +188,10 @@ spec:
   interval: 1m0s
   prune: true
   force: false
+```
+
+```
+kubectl get Kustomization -A
 ```
 
 ## FluxCD UI - Capacitor
