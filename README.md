@@ -178,6 +178,20 @@ spec:
   force: false
 ```
 
+## FluxCD UI - Capacitor
+
+```bash
+kubectl apply -f ./examples/capacitor.yml
+```
+
+Expose it
+
+```bash
+kubectl -n flux-system port-forward svc/capacitor 9000:9000
+```
+
+See it: http://127.0.0.1:9000
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
