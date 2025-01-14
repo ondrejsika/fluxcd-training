@@ -82,6 +82,44 @@ flux bootstrap gitlab \
   --personal # required for personal project
 ```
 
+## Helm Repoisotry
+
+```bash
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: sikalabs
+  namespace: flux-system
+spec:
+  url: https://helm.sikalabs.io
+  interval: 1m
+```
+
+## Helm Repoisotry from Artifactory
+
+```bash
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: artifactory
+  namespace: flux-system
+spec:
+  url: https://artifactory.sikademo.com/artifactory/api/helm/hello-world-helm
+  interval: 1m
+  secretRef:
+    name: artifactory-credentials
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: artifactory-credentials
+  namespace: flux-system
+type: Opaque
+stringData:
+  username: admin
+  password: cmVmdGtuOjAxOjE3NjQ3MDc4Mjk6dFZKWXpZeEN4VTM0Rm9CWVNqQ2tBMjI4Y2RO
+```
+
 ## Training Sessions
 
 ### 2024-12-02 T-Mobile
