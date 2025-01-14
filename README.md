@@ -81,3 +81,10 @@ flux bootstrap gitlab \
   --path=$GITLAB_PROJECT_PATH \
   --personal # required for personal project
 ```
+
+## Training Sessions
+
+### 2024-12-02 T-Mobile
+
+- https://github.com/sika-training-examples/2024-12-02_fluxcd-example
+- https://github.com/sika-training-examples/2024-12-03_t-mobile-fluxcd-example
