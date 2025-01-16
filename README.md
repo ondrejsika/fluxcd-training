@@ -252,6 +252,25 @@ http://127.0.0.1:8000
 
 ## Training Sessions
 
+### 2025-01-14 T-Mobile
+
+FluxCD Repositories
+
+- https://github.com/sika-training-examples/2025-01-14_ondrejsika-gitops
+- https://github.com/sika-training-examples/2025-01-14_ondrejsika-gitops-example
+- https://github.com/sika-training-examples/2025-01-14_gitops-tenants
+- https://github.com/sika-training-examples/2025-01-14_example-counter-gitops
+
+Helm Chart Repositories
+
+- https://github.com/sika-training-examples/2025-01-14_example-counter-backend-helm
+- https://github.com/sika-training-examples/2025-01-14_example-counter-frontend-helm
+
+Application Repositories (with Dockerfiles)
+
+- https://github.com/sika-training-examples/2025-01-14_example-counter-backend
+- https://github.com/sika-training-examples/2025-01-14_example-counter-frontend
+
 ### 2024-12-02 T-Mobile
 
 - https://github.com/sika-training-examples/2024-12-02_fluxcd-example
