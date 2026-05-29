@@ -30,6 +30,12 @@ Linux
 curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
+or using `slu`
+
+```bash
+slu install-bin flux
+```
+
 Autocomplete
 
 ```bash
