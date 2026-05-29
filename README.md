@@ -1,3 +1,5 @@
+[Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io> | [go to course ->](#course)
+
 # fluxcd-training
 
 ## Course
