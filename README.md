@@ -2,6 +2,8 @@
 
 # fluxcd-training
 
+![fluxcd-logo](_images/fluxcd_logo.svg)
+
 ## Course
 
 ## Install Flux using Helm
